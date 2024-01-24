@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to AttendanceQR</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+    <style>
+        /* Reset some default styles */
+        body, html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            overflow: hidden; /* Prevent scrolling */
+        }
+
+        /* Dynamic background color animation */
+        body {
+            animation: changeBackgroundColor 10s infinite;
+        }
+
+        @keyframes changeBackgroundColor {
+            0% {
+                background-color: #FF4757; /* Initial reddish background */
+            }
+            50% {
+                background-color: #FF6B81; /* Lighter reddish background */
+            }
+            100% {
+                background-color: #FF4757; /* Back to reddish background */
+            }
+        }
+
+        .container {
+            width: 100%;
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+            text-align: center;
+            margin-top: 20px; /* Added margin to move container down slightly */
+        }
+
+        .welcome-box {
+            background-color: #fff;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .illustration img {
+            width: 100%;
+            height: auto;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        h1 {
+            color: #FF4757; /* Reddish color for the title */
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #333; /* Darker text color */
+            font-size: 18px;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        /* Stylish button animations */
+        .buttons {
+            display: flex;
+            justify-content: center; /* Center buttons horizontally */
+            align-items: center;
+            margin-top: 20px; /* Added margin for spacing */
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 30px;
+            margin: 10px;
+            color: white;
+            background-color: #FF4757; /* Reddish button color */
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 16px;
+            transition: background-color 0.3s, transform 0.3s;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: #FF6B81; /* Lighter reddish button color on hover */
+            transform: scale(1.05);
+        }
+
+        .guest {
+            color: #333; /* Darker text color for the guest link */
+            font-size: 16px;
+            text-decoration: none;
+        }
+
+        .guest:hover {
+            text-decoration: underline;
+        }
+
+        .qr-code {
+            margin-top: 20px;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="welcome-box">
+            <div class="illustration">
+                <!-- Replace 'illustration.jpg' with the actual path to your image file -->
+                <img src="illustration.jpg" alt="Welcome Illustration" />
+            </div>
+            <div class="content">
+                <!-- Generate QR code image -->
+                <img class="qr-code" src="https://api.qrserver.com/v1/create-qr-code/?size=100x100&data=Welcome%20to%20AttendanceQR" alt="QR Code" />
+                <h1>Welcome to AttendanceQR</h1>
+                <p>AttendanceQR is the ultimate productivity app for managing your class attendance. Download it now and manage your tasks effortlessly!</p>
+                <div class="buttons">
+                    <a href="/login" class="button">Log In</a>
+                    <a href="signup.html" class="button">Join Now</a>
+                </div>
+                <a href="#" class="guest">Continue as a guest</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

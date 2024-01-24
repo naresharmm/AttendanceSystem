@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+    <style>
+        /* Basic reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        .app-container {
+            width: 80%;
+            max-width: 1000px;
+            margin: 2rem auto;
+            background-color: #ffffff;
+            border-radius: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background-color: #007bff;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .login-info {
+            margin-top: 0.5rem;
+            color: #333;
+        }
+
+        .main-content {
+            padding: 2rem;
+        }
+
+        .qr-scanner {
+            background-color: #ffcccc;
+            padding: 2rem;
+            margin: 1rem;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .qr-scanner h2, .todays-class h2, .leaderboard h2 {
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        .start-btn, .begin-btn {
+            background-color: #007bff;
+            color: white;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            margin-top: 1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .start-btn:hover, .begin-btn:hover {
+            background-color: #0056b3;
+        }
+
+        /* Icons */
+        .icon {
+            font-size: 24px;
+            margin-right: 10px;
+        }
+
+        /* Additional Styling */
+        .action-buttons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .action-buttons .button {
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <div class="header">
+            <h1>Welcome to AttendanceQR</h1>
+            <p class="login-info">Logged in as Lisa</p>
+        </div>
+
+        <!-- Main content -->
+        <div class="main-content">
+            <!-- QR Code Scanner -->
+            <div class="qr-scanner">
+                <div class="qr-scanner-inner">
+                    <h2><i class="icon fas fa-qrcode"></i> Scan QR code</h2>
+                    <p>View attendance log</p>
+                    <div class="action-buttons">
+                        <button class="start-btn" onclick="simulateQRScan()">Start Scanning</button>
+                        <button class="begin-btn">View Log</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Today's Class -->
+            <div class="todays-class">
+                <h2><i class="icon fas fa-chalkboard"></i> Today's class</h2>
+                <p>English Lesson 4</p>
+                <button class="begin-btn">Begin</button>
+            </div>
+
+            <!-- Leaderboard -->
+            <div class="leaderboard">
+                <h2><i class="icon fas fa-trophy"></i> Attendance leaderboard</h2>
+                <!-- Dynamic content here -->
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script>
+        // Placeholder for future interactive JavaScript
+        function simulateQRScan() {
+            alert('Simulating QR code scanning...');
+        }
+    </script>
+</body>
+</html>
